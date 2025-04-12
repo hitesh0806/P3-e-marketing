@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div id="productbread">
+            <img style="position: absolute;width: 250px;" src="../P3-e-marketing/Bread.jpg" alt="1 image">
+            <div style="position: absolute;left:22%;top:43px;" id="productbreadbuttons">
+                <button style="position: absolute;padding: 5px;" id="productbread" onclick="productbread()">Bread</button><br><br>
+                <button style="position: absolute;padding: 5px;" id="productadd" onclick="productquantityaddbread()">+1</button><br><br>
+                <button style="position: absolute;padding: 5px;"  id="productsubtract" onclick="productquantitysubtractbread()">-1</button><br><br>
+            </div>
+        </div>
+        <div id="productbutter">
+            <img style="position: absolute;width: 250px;top: 200px;" src="../P3-e-marketing/Butter.jpg" alt="1 image">
+            <div style="position: absolute;left:22%;top:33%;" id="productbutterbuttons">
+                <button style="position: absolute;padding: 5px;"  id="productbutter" onclick="productbutter()">Butter</button><br><br>
+                <button style="position: absolute;padding: 5px;"  id="productadd" onclick="productquantityaddbutter()">+1</button><br><br>
+                <button style="position: absolute;padding: 5px;"  id="productsubtract" onclick="productquantitysubtractbutter()">-1</button><br><br>
+            </div>
+        </div>
+        <div id="productcheese">
+            <img style="position: absolute;width: 250px;top:400px" src="../P3-e-marketing/Cheese.jpg" alt="1 image">
+            <div style="position: absolute;left:22%;top:63%;" id="productcheesebuttons">
+                <button style="position: absolute;padding: 5px;" id="productcheese" onclick="productcheese()">Cheese</button><br><br>
+                <button style="position: absolute;padding: 5px;" id="productadd" onclick="productquantityaddcheese()">+1</button><br><br>
+                <button style="position: absolute;padding: 5px;" id="productsubtract" onclick="productquantitysubtractcheese()">-1</button><br><br>
+            </div>
+        </div>
+        <div style="position: absolute;left:50%;top:30px;width: 200px;text-align: center;background-color: aquamarine;" id="productdetails">
+            <h4 id="productname"></h4>
+            <h4 id="productquantity"></h4>
+            <h4 id="productprice"></h4>
+        </div>
+        <button style="position: absolute;left:67%;top:30px;" onclick="reset()">Reset</button>
+    </body>
+    <script src="java.js"></script>
+</html>
