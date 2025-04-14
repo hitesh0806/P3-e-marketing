@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Billing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f6f6f6;
+            padding: 40px;
+        }
+
+        .bill-container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .bill-header, .bill-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            padding: 12px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .bill-header {
+            font-weight: bold;
+            background-color: #f0f0f0;
+        }
+
+        .bill-row:last-child {
+            border-bottom: none;
+        }
+
+        .bill-footer {
+            margin-top: 20px;
+            text-align: right;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="bill-container">
+        <h2>Billing Summary</h2>
+        <div class="bill-header">
+            <div>Product Name</div>
+            <div>Quantity</div>
+            <div>Price</div>
+        </div>
+        <div class="bill-row" id="bread"></div>
+        <div class="bill-row" id="butter"></div>
+        <div class="bill-row" id="cheese"></div>
+        <div class="bill-footer" id="total"></div>
+    </div>
+
+    <script>
+        window.onload = function () {
+            const details = JSON.parse(localStorage.getItem('details'));
+            if (details) {
+                document.getElementById('bread').innerHTML = `<div>Bread</div><div>${details.a1}</div><div>${details.e1}</div>`;
+                document.getElementById('butter').innerHTML = `<div>Butter</div><div>${details.a2}</div><div>${details.e2}</div>`;
+                document.getElementById('cheese').innerHTML = `<div>Cheese</div><div>${details.a3}</div><div>${details.e3}</div>`;
+
+                const total = details.e1 + details.e2 + details.e3;
+                document.getElementById('total').textContent = `Total: ₹${total}`;
+            } else {
+                document.querySelector('.bill-container').innerHTML = '<p>No content saved</p>';
+            }
+        }
+    </script>
+</body>
+</html>
