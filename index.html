@@ -2,10 +2,18 @@
 <html>
     <head>
         <title></title>
+        <style>
+            body{
+                background-color: rgb(138, 174, 162);
+            }
+            #productdetails{
+                border-radius: 5px;
+            }
+        </style>
     </head>
     <body>
         <div id="productbread">
-            <img style="position: absolute;width: 250px;" src="Bread.jpg" alt="1 image">
+            <img style="position: absolute;width: 250px;border-radius: 5px;" src="Bread.jpg" alt="1 image">
             <div style="position: absolute;left:22%;top:43px;" id="productbreadbuttons">
                 <button style="position: absolute;padding: 5px;" id="productbread" onclick="productbread()">Bread</button><br><br>
                 <button style="position: absolute;padding: 5px;" id="productadd" onclick="productquantityaddbread()">+1</button><br><br>
@@ -13,7 +21,7 @@
             </div>
         </div>
         <div id="productbutter">
-            <img style="position: absolute;width: 250px;top: 200px;" src="Butter.jpg" alt="1 image">
+            <img style="position: absolute;width: 250px;top: 200px;border-radius: 5px;" src="Butter.jpg" alt="1 image">
             <div style="position: absolute;left:22%;top:33%;" id="productbutterbuttons">
                 <button style="position: absolute;padding: 5px;"  id="productbutter" onclick="productbutter()">Butter</button><br><br>
                 <button style="position: absolute;padding: 5px;"  id="productadd" onclick="productquantityaddbutter()">+1</button><br><br>
@@ -21,7 +29,7 @@
             </div>
         </div>
         <div id="productcheese">
-            <img style="position: absolute;width: 250px;top:400px" src="Cheese.jpg" alt="1 image">
+            <img style="position: absolute;width: 250px;top:400px;border-radius: 5px;" src="Cheese.jpg" alt="1 image">
             <div style="position: absolute;left:22%;top:63%;" id="productcheesebuttons">
                 <button style="position: absolute;padding: 5px;" id="productcheese" onclick="productcheese()">Cheese</button><br><br>
                 <button style="position: absolute;padding: 5px;" id="productadd" onclick="productquantityaddcheese()">+1</button><br><br>
