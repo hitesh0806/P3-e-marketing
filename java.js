@@ -12,15 +12,15 @@ const butter=document.getElementById('butter');
 const cheese=document.getElementById('cheese');
 let details=JSON.parse(localStorage.getItem('details'))||
 {
-    a1:1,
-    a2:1,
-    a3:1,
-    b:20,
-    c:50,
-    d:80,
-    e1:20,
-    e2:50,
-    e3:80
+    a1:0,
+    a2:0,
+    a3:0,
+    b:0,
+    c:0,
+    d:0,
+    e1:0,
+    e2:0,
+    e3:0,
 };
 function productbread()
 {
@@ -45,6 +45,7 @@ function productcheese()
 }
 function productquantityaddbread()
 {
+    e1=20
     details.a1++;
     details.e1=details.b*details.a1;
     prodnquantity1.textContent='Quantity: '+details.a1;
@@ -53,6 +54,7 @@ function productquantityaddbread()
 }
 function productquantitysubtractbread()
 {
+    e1=20;
     details.a1--;
     details.e1=details.b*details.a1;
     prodnquantity1.textContent='Quantity: '+details.a1;
@@ -61,6 +63,7 @@ function productquantitysubtractbread()
 }
 function productquantityaddbutter()
 {
+    e2=50;
     details.a2++;
     details.e2=details.c*details.a2;
     prodnquantity2.textContent='Quantity: '+details.a2;
@@ -69,6 +72,7 @@ function productquantityaddbutter()
 }
 function productquantitysubtractbutter()
 {
+    e2=50;
     details.a2--;
     details.e2=details.c*details.a2;
     prodnquantity2.textContent='Quantity: '+details.a2;
@@ -77,6 +81,7 @@ function productquantitysubtractbutter()
 }
 function productquantityaddcheese()
 {
+    e3=80;
     details.a3++;
     details.e3=details.d*details.a3;
     prodnquantity3.textContent='Quantity: '+details.a3;
@@ -85,6 +90,7 @@ function productquantityaddcheese()
 }
 function productquantitysubtractcheese()
 {
+    e3=80;
     details.a3--;
     details.e3=details.d*details.a3;
     prodnquantity3.textContent='Quantity: '+details.a3;
@@ -93,15 +99,15 @@ function productquantitysubtractcheese()
 }
 function reset1()
 {
-    details.a1=1;
-    details.a2=1;
-    details.a3=1;
+    details.a1=0;
+    details.a2=0;
+    details.a3=0;
     details.b=20;
     details.c=50;
     details.d=80;
-    details.e1=20;
-    details.e2=50;
-    details.e3=80; 
+    details.e1=0;
+    details.e2=0;
+    details.e3=0; 
     localStorage.removeItem('details');
     prodname1.textContent='';
     prodnquantity1.textContent='';
@@ -109,15 +115,15 @@ function reset1()
 }
 function reset2()
 {
-    details.a1=1;
-    details.a2=1;
-    details.a3=1;
+    details.a1=0;
+    details.a2=0;
+    details.a3=0;
     details.b=20;
     details.c=50;
     details.d=80;
-    details.e1=20;
-    details.e2=50;
-    details.e3=80;
+    details.e1=0;
+    details.e2=0;
+    details.e3=0;
     localStorage.removeItem('details');
     prodname2.textContent='';
     prodnquantity2.textContent='';
@@ -125,15 +131,15 @@ function reset2()
 }
 function reset3()
 {
-    details.a1=1;
-    details.a2=1;
-    details.a3=1;
+    details.a1=0;
+    details.a2=0;
+    details.a3=0;
     details.b=20;
     details.c=50;
     details.d=80;
-    details.e1=20;
-    details.e2=50;
-    details.e3=80;
+    details.e1=0;
+    details.e2=0;
+    details.e3=0;
     localStorage.removeItem('details');
     prodname3.textContent='';
     prodnquantity3.textContent='';
