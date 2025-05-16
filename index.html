@@ -3,59 +3,203 @@
     <head>
         <title></title>
         <style>
-            body{
+           body{
                 background-color: rgb(138, 174, 162);
             }
-            #productdetails{
-                border-radius: 5px;
+           
+            button {
+                background:none;
+                border:none;
+                
             }
+            
+            #productbreadbuttons
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start; 
+                gap: 10px; 
+                position: absolute;
+                left:22%;
+                top:52px;
+            }
+            
+            #productbread1
+            {
+              position: absolute;
+              width: 250px;
+              height: 250px;
+              border-radius: 250px;
+            }
+            #productadd12
+            {
+              position: absolute;
+              border:1px solid black;
+              width: 50px;
+              height: 50px;
+              margin: 20px;
+              border-radius: 50px;
+            }
+            #productsubtract14
+            {
+              position: absolute;
+              border:1px solid black;
+              width: 50px;
+              height: 50px;
+              margin: 20px;
+              border-radius: 50px;
+            }
+            #productbutterbuttons
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start; 
+                gap: 10px; 
+                position: absolute;
+                left:22%;
+                top:50%;
+            }
+            #productbutter1
+            {
+              position: absolute;
+              width: 250px;
+              height: 250px;
+              top:45%;
+              left:2%;
+              border-radius: 250px;
+            }
+            #productadd22
+            {
+              position: absolute;
+              border:1px solid black;
+              width: 50px;
+              height: 50px;
+              margin: 20px;
+              border-radius: 50px;
+            }
+            
+            #productsubtract24
+            {
+              position: absolute;
+              border:1px solid black;
+              width: 50px;
+              height: 50px;
+              margin: 20px;
+              border-radius: 50px;
+            }
+            #productcheesebuttons
+            { 
+              
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start; 
+                gap: 10px; 
+                left:22%;
+                top:92%;
+                position: absolute;
+            } 
+            
+            #productcheese1
+            { 
+              position: absolute;
+              width: 250px;
+              height: 250px;
+              top:87%;
+              left:2%;
+              border-radius: 250px; 
+            }
+            #productadd32
+            {
+              position: absolute;
+              border:1px solid black;
+              width: 50px;
+              height: 50px;
+              margin: 20px;
+              border-radius: 50px;
+            }
+            #productsubtract34
+            {
+              position: absolute;
+              border:1px solid black;
+              width: 50px;
+              height: 50px;
+              margin: 20px;
+              border-radius: 50px;
+            }
+
+
         </style>
     </head>
     <body>
-        <div id="productbread">
-            <img style="position: absolute;width: 250px;border-radius: 5px;" src="Bread.jpg" alt="1 image">
-            <div style="position: absolute;left:22%;top:43px;" id="productbreadbuttons">
-                <button style="position: absolute;padding: 5px;" id="productbread" onclick="productbread()">Bread</button><br><br>
-                <button style="position: absolute;padding: 5px;" id="productadd" onclick="productquantityaddbread()">+1</button><br><br>
-                <button style="position: absolute;padding: 5px;"  id="productsubtract" onclick="productquantitysubtractbread()">-1</button><br><br>
-            </div>
-        </div>
-        <div id="productbutter">
-            <img style="position: absolute;width: 250px;top: 200px;border-radius: 5px;" src="Butter.jpg" alt="1 image">
-            <div style="position: absolute;left:22%;top:33%;" id="productbutterbuttons">
-                <button style="position: absolute;padding: 5px;"  id="productbutter" onclick="productbutter()">Butter</button><br><br>
-                <button style="position: absolute;padding: 5px;"  id="productadd" onclick="productquantityaddbutter()">+1</button><br><br>
-                <button style="position: absolute;padding: 5px;"  id="productsubtract" onclick="productquantitysubtractbutter()">-1</button><br><br>
-            </div>
-        </div>
-        <div id="productcheese">
-            <img style="position: absolute;width: 250px;top:400px;border-radius: 5px;" src="Cheese.jpg" alt="1 image">
-            <div style="position: absolute;left:22%;top:63%;" id="productcheesebuttons">
-                <button style="position: absolute;padding: 5px;" id="productcheese" onclick="productcheese()">Cheese</button><br><br>
-                <button style="position: absolute;padding: 5px;" id="productadd" onclick="productquantityaddcheese()">+1</button><br><br>
-                <button style="position: absolute;padding: 5px;" id="productsubtract" onclick="productquantitysubtractcheese()">-1</button><br><br>
-            </div>
-        </div>
-        <div style="position: absolute;left:50%;top:30px;width: 200px;text-align: center;background-color: aquamarine;" id="productdetails">
+        <div id="products">
+                <div id="productbread">
+                    
+                            <button onclick="productbread()">
+                                <img id='productbread1' src="Bread.jpg">
+                            </button><br><br>
+                        <div id="productbreadbuttons">
+                            <button  onclick="productquantityaddbread()">
+                                <img  id="productadd12" src="add bread.png">
+                            </button><br><br>
+                            <button onclick="productquantitysubtractbread()">
+                                <img  id="productsubtract14" src="bread subtract.png">
+                            </button><br><br>
+                        </div>
+
+                </div>
+                <div id="productbutter">
+                
+                    
+                        <button id="productbutter" onclick="productbutter()">
+                            <img id="productbutter1" src="Butter.jpg">
+                        </button>
+                    <div id="productbutterbuttons">
+                        <button onclick="productquantityaddbutter()">
+                            <img id="productadd22" src="butter add.png">
+                        </button><br><br>
+                        <button onclick="productquantitysubtractbutter()">
+                            <img id="productsubtract24" src="butter subtract.png">
+                        </button><br><br>
+                        </div>
+                    </div>
+                
+                <div id="productcheese">
+                    
+                    
+                        <button onclick="productcheese()">
+                            <img  src="Cheese.jpg" id="productcheese1" >
+                        </button><br><br>
+                    <div id="productcheesebuttons">
+                        <button onclick="productquantityaddcheese()">
+                            <img src="cheese add.png" id="productadd32" >
+                        </button><br><br>
+                        <button onclick="productquantitysubtractcheese()">
+                            <img src="cheese subtract.png" id="productsubtract34" >
+                        </button><br><br>
+                    </div>
+                    </div>
+                </div>
+         </div>
+        <div style="position: absolute;left:50%;top:80px;width: 200px;text-align: center;background-color: aquamarine;border-radius: 200px;" id="productdetails">
             <h4 id="productnamebread"></h4>
             <h4 id="productquantitybread"></h4>
             <h4 id="productpricebread"></h4>
         </div>
-        <div style="position: absolute;left:50%;top:220px;width: 200px;text-align: center;background-color: aquamarine;" id="productdetails">
+        <div style="position: absolute;left:50%;top:350px;width: 200px;text-align: center;background-color: aquamarine;border-radius: 200px" id="productdetails">
             <h4 id="productnamebutter"></h4>
             <h4 id="productquantitybutter"></h4>
             <h4 id="productpricebutter"></h4>
         </div>
-        <div style="position: absolute;left:50%;top:420px;width: 200px;text-align: center;background-color: aquamarine;" id="productdetails">
+        <div style="position: absolute;left:50%;top:630px;width: 200px;text-align: center;background-color: aquamarine;border-radius: 200px" id="productdetails">
             <h4 id="productnamecheese"></h4>
             <h4 id="productquantitycheese"></h4>
             <h4 id="productpricecheese"></h4>
         </div>
-        <button style="position: absolute;left:67%;top:30px;" onclick="reset1()">Reset</button>
-        <button style="position: absolute;left:67%;top:220px;" onclick="reset2()">Reset</button>
-        <button style="position: absolute;left:67%;top:420px;" onclick="reset3()">Reset</button>
-        <button style="position: absolute;left:67%;top:570px;"  onclick="addtocart()">Add to cart</button>
-        <button style="position: absolute;left:67%;top:610px;" onclick="viewcart()">View cart</button>
+        <button style="position: absolute;left:67%;top:80px;border-radius: 200px;background-color: rgb(47, 120, 96);" onclick="reset1()">Reset</button>
+        <button style="position: absolute;left:67%;top:350px;border-radius: 200px;background-color: rgb(47, 120, 96);" onclick="reset2()">Reset</button>
+        <button style="position: absolute;left:67%;top:630px;border-radius: 200px;background-color: rgb(47, 120, 96);" onclick="reset3()">Reset</button>
+        <button style="position: absolute;left:78%;top:750px;border-radius: 200px;background-color: rgb(47, 120, 96);"  onclick="addtocart()">Add to cart</button>
+        <button style="position: absolute;left:78%;top:790px;border-radius: 200px;background-color: rgb(47, 120, 96);" onclick="viewcart()">View cart</button>
     </body>
     <script src="java.js"></script>
 </html>
